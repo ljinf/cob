@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dc50cc08-3ff0-4a91-a3b9-9c1c59078701" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/cob.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/binding/binding.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/binding/json.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/binding/validator.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/binding/xml.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/context.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/engine.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/error/error.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/blog/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/blog/tpl/header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/blog/tpl/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/blog/tpl/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/blog/tpl/test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/group.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/bytesconv/bytesconv.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/lstrings/lstrings.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/json.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/log.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/text.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recovery.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/render/html.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/render/json.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/render/redirect.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/render/render.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/render/string.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/render/xml.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/router.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tree.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tree_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils.go" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GOROOT" path="D:\Go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2VQDYPsOL4g8jYMkpMETOJX1PQK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="go.vgo" />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+    <proxy>https://goproxy.cn,direct</proxy>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="640" y="140" key="FileChooserDialogImpl" timestamp="1694763100303">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="640" y="140" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1694763100303" />
+    <state x="395" y="52" width="1130" height="936" key="find.popup" timestamp="1694759500659">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="395" y="52" width="1130" height="936" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1694759500659" />
+  </component>
+</project>
