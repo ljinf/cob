@@ -5,7 +5,10 @@ import (
 	"github.com/ljinfu/cob"
 	error2 "github.com/ljinfu/cob/error"
 	"github.com/ljinfu/cob/log"
+	"github.com/ljinfu/cob/pool"
 	"net/http"
+	"sync"
+	"time"
 )
 
 func main() {
@@ -191,6 +194,43 @@ func start() {
 	user.Get("/res", func(ctx *cob.Context) {
 		err := login()
 		ctx.HandleWithError(http.StatusOK, "", err)
+	})
+
+	p, _ := pool.NewPool(3)
+	user.Get("/pool", func(ctx *cob.Context) {
+		currentTime := time.Now().UnixMilli()
+		var wg sync.WaitGroup
+		wg.Add(1)
+		p.Submit(func() {
+			fmt.Println("1111111111")
+			panic("这是111111的panic")
+			time.Sleep(3 * time.Second)
+			wg.Done()
+		})
+		//p.Submit(func() {
+		//	fmt.Println("222222222222")
+		//	time.Sleep(3 * time.Second)
+		//	wg.Done()
+		//})
+		//p.Submit(func() {
+		//	fmt.Println("33333333333333")
+		//	time.Sleep(3 * time.Second)
+		//	wg.Done()
+		//})
+		//p.Submit(func() {
+		//	fmt.Println("4444444444")
+		//	time.Sleep(3 * time.Second)
+		//	wg.Done()
+		//})
+		//p.Submit(func() {
+		//	fmt.Println("5555555555")
+		//	time.Sleep(3 * time.Second)
+		//	wg.Done()
+		//})
+		wg.Wait()
+
+		fmt.Printf("time:%v\n", time.Now().UnixMilli()-currentTime)
+		ctx.JSON(http.StatusOK, "")
 	})
 
 	engine.Run()

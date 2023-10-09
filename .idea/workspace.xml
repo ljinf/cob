@@ -2,47 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc50cc08-3ff0-4a91-a3b9-9c1c59078701" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/cob.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/binding/binding.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/binding/json.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/binding/validator.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/binding/xml.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/context.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/engine.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/error/error.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/blog/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/blog/tpl/header.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/blog/tpl/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/blog/tpl/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/blog/tpl/test.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/group.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/bytesconv/bytesconv.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/lstrings/lstrings.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/json.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/log.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/text.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recovery.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/render/html.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/render/json.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/render/redirect.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/render/render.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/render/string.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/render/xml.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/router.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tree.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tree_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pool/pool.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pool/worker.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/engine.go" beforeDir="false" afterPath="$PROJECT_DIR$/engine.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/blog/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/examples/blog/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/log.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/log/log.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
   </component>
   <component name="GOROOT" path="D:\Go" />
   <component name="Git.Settings">
@@ -56,12 +35,13 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../crab" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -69,6 +49,22 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="go.vgo" />
+  </component>
+  <component name="RunManager">
+    <configuration name="go build github.com/ljinfu/cob/examples/blog" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="cob" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/examples/blog/main.go" />
+      <package value="github.com/ljinfu/cob/examples/blog" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build github.com/ljinfu/cob/examples/blog" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -78,10 +74,46 @@
     <proxy>https://goproxy.cn,direct</proxy>
   </component>
   <component name="WindowStateProjectService">
-    <state x="640" y="140" key="FileChooserDialogImpl" timestamp="1694763100303">
+    <state x="640" y="140" key="FileChooserDialogImpl" timestamp="1695264391122">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="640" y="140" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1694763100303" />
+    <state x="640" y="140" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1695264391122" />
+    <state width="1855" height="457" key="GridCell.Tab.0.bottom" timestamp="1696764248681">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1855" height="457" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1696764248681" />
+    <state width="1855" height="428" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1695287221188" />
+    <state width="1855" height="457" key="GridCell.Tab.0.center" timestamp="1696764248681">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1855" height="457" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1696764248681" />
+    <state width="1855" height="428" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1695287221187" />
+    <state width="1855" height="457" key="GridCell.Tab.0.left" timestamp="1696764248681">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1855" height="457" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1696764248681" />
+    <state width="1855" height="428" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1695287221187" />
+    <state width="1855" height="457" key="GridCell.Tab.0.right" timestamp="1696764248681">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1855" height="457" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1696764248681" />
+    <state width="1855" height="428" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1695287221188" />
+    <state width="1855" height="457" key="GridCell.Tab.1.bottom" timestamp="1696764248682">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1855" height="457" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1696764248682" />
+    <state width="1855" height="457" key="GridCell.Tab.1.center" timestamp="1696764248681">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1855" height="457" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1696764248681" />
+    <state width="1855" height="457" key="GridCell.Tab.1.left" timestamp="1696764248681">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1855" height="457" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1696764248681" />
+    <state width="1855" height="457" key="GridCell.Tab.1.right" timestamp="1696764248682">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1855" height="457" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1696764248682" />
     <state x="395" y="52" width="1130" height="936" key="find.popup" timestamp="1694759500659">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

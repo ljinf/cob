@@ -28,6 +28,7 @@ func New() *Engine {
 	engine := &Engine{
 		Router: Router{},
 	}
+	engine.Router.engin = engine
 	engine.pool.New = func() interface{} {
 		return engine.allocateContext()
 	}

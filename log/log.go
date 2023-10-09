@@ -116,6 +116,7 @@ func (l *Logger) Print(level LoggerLevel, msg interface{}) {
 		Msg:          msg,
 	}
 	formatStr := l.Formatter.Format(param)
+	//不同日志级别的writer
 	for _, out := range l.Outs {
 		if out.Out == os.Stdout {
 			param.isColor = true

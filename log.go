@@ -45,7 +45,7 @@ var defaultFormatter = func(params *LogFormatterParams) string {
 		params.Latency = params.Latency.Truncate(time.Second)
 	}
 	//todo 颜色输出
-	return fmt.Sprintf("[cob] %v |%s %3d %s| %13v | %15s |%-7s %#v",
+	return fmt.Sprintf("[cob] %v |%s %3d %s| %13v | %15s |%-7s %#v \n",
 		params.TimeStamp.Format("2006-01-02 15:04:05"),
 		statusCodeColor, params.StatusCode,
 		reset, params.Latency, params.ClientIP,
