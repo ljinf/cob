@@ -6,21 +6,13 @@ import (
 	error2 "github.com/ljinfu/cob/error"
 	"github.com/ljinfu/cob/log"
 	"github.com/ljinfu/cob/pool"
+	"github.com/ljinfu/cob/token"
 	"net/http"
 	"sync"
 	"time"
 )
 
 func main() {
-
-	//http.HandleFunc("/", func(writer http.ResponseWriter, request *http.Request) {
-	//	fmt.Fprintf(writer, "%s 欢迎来到从零实现一个微服务框架！", "ljf.com")
-	//})
-	//
-	//if err := http.ListenAndServe(":8080", nil); err != nil {
-	//	log.Fatal(err)
-	//}
-
 	start()
 }
 
@@ -233,7 +225,27 @@ func start() {
 		ctx.JSON(http.StatusOK, "")
 	})
 
-	engine.Run()
+	user.Get("/login12", func(ctx *cob.Context) {
+		jwt := &token.JwtHandler{}
+		jwt.Key = []byte("123456")
+		jwt.SendCookie = true
+		jwt.Timeout = 10 * time.Minute
+		jwt.RefreshTimeout = 20 * time.Minute
+
+		jwt.Authenticator = func(ctx *cob.Context) (m map[string]interface{}, err error) {
+			data := make(map[string]interface{})
+			data["userId"] = 1
+			return data, nil
+		}
+		tokenStr, err := jwt.LoginHandler(ctx)
+		if err != nil {
+			ctx.JSON(http.StatusOK, err.Error())
+			return
+		}
+		ctx.JSON(http.StatusOK, tokenStr)
+	})
+
+	engine.Run(":8080")
 }
 
 type cobResponse struct {

@@ -13,6 +13,7 @@ import (
 	"net/url"
 	"os"
 	"strings"
+	"sync"
 )
 
 const defaultMaxMemory = 32 << 20 //32m
@@ -29,6 +30,10 @@ type Context struct {
 	StatusCode            int
 
 	Logger *log.Logger
+
+	Keys     map[string]interface{}
+	mu       sync.RWMutex
+	sameSite http.SameSite
 }
 
 func (c *Context) initQueryCache() {
@@ -277,4 +282,44 @@ func (c *Context) HandleWithError(statusCode int, obj interface{}, err error) {
 		return
 	}
 	c.JSON(statusCode, obj)
+}
+
+func (c *Context) SetBasicAuth(username, password string) {
+	c.Request.SetBasicAuth(username, password)
+}
+
+func (c *Context) Set(key string, value interface{}) {
+	c.mu.Lock()
+	if c.Keys == nil {
+		c.Keys = make(map[string]interface{})
+	}
+	c.Keys[key] = value
+	c.mu.Unlock()
+}
+
+func (c *Context) Get(key string) (value interface{}, ok bool) {
+	c.mu.RLock()
+	defer c.mu.RUnlock()
+	value, ok = c.Keys[key]
+	return
+}
+
+func (c *Context) SetCookie(name, value string, maxAge int, path, domain string, secure, httpOnly bool) {
+	if path == "" {
+		path = "/"
+	}
+	http.SetCookie(c.Writer, &http.Cookie{
+		Name:     name,
+		Value:    url.QueryEscape(value),
+		Path:     path,
+		Domain:   domain,
+		MaxAge:   maxAge,
+		Secure:   secure,
+		HttpOnly: httpOnly,
+		SameSite: c.sameSite,
+	})
+}
+
+func (c *Context) SetSameSite(s http.SameSite) {
+	c.sameSite = s
 }

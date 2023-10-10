@@ -5,7 +5,6 @@ import (
 	coblog "github.com/ljinfu/cob/log"
 	"github.com/ljinfu/cob/render"
 	"html/template"
-	"log"
 	"net/http"
 	"sync"
 )
@@ -47,10 +46,12 @@ func (e *Engine) allocateContext() interface{} {
 	return &Context{engine: e}
 }
 
-func (e *Engine) Run() {
-	if err := http.ListenAndServe(":8080", e); err != nil {
-		log.Fatal(err)
-	}
+func (e *Engine) Run(addr string) error {
+	return http.ListenAndServe(addr, e)
+}
+
+func (e *Engine) RunTLS(addr, certFile, keyFile string) error {
+	return http.ListenAndServeTLS(addr, certFile, keyFile, e)
 }
 
 func (e *Engine) ServeHTTP(w http.ResponseWriter, r *http.Request) {
@@ -106,7 +107,7 @@ func (e *Engine) SetHtmlTemplate(t *template.Template) {
 }
 
 func (e *Engine) Use(handleFunc ...MiddlewareFunc) {
-	e.Middles = handleFunc
+	e.Middles = append(e.Middles, handleFunc...)
 }
 
 func (e *Engine) RegistryErrHandler(handler ErrorHandler) {
